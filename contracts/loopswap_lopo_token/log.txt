@@ -1,0 +1,319 @@
+
+running 34 tests
+test allowances::tests::no_self_allowance ... ok
+test contract::tests::instantiate::marketing::invalid_marketing ... ok
+test contract::tests::instantiate::mintable_over_cap ... ok
+test contract::tests::marketing::update_description ... ok
+test contract::tests::marketing::clear_project ... ok
+test allowances::tests::burn_from_respects_limits ... ok
+test contract::tests::marketing::update_logo_png ... ok
+test contract::tests::marketing::update_logo_png_invalid ... ok
+test contract::tests::marketing::update_logo_png_oversized ... ok
+test contract::tests::instantiate::marketing::basic ... ok
+test allowances::tests::increase_decrease_allowances ... ok
+test contract::tests::marketing::update_logo_svg ... ok
+test contract::tests::marketing::update_logo_svg_invalid ... ok
+test contract::tests::marketing::update_logo_url ... ok
+test contract::tests::marketing::clear_marketing ... ok
+test allowances::tests::allowances_independent ... ok
+test contract::tests::marketing::update_logo_svg_oversized ... ok
+test contract::tests::marketing::update_unauthorised ... ok
+test contract::tests::marketing::clear_description ... ok
+test contract::tests::marketing::update_marketing_invalid ... ok
+test contract::tests::no_one_mints_if_minter_unset ... ok
+test contract::tests::marketing::update_project ... ok
+test contract::tests::marketing::update_marketing ... ok
+test contract::tests::others_cannot_mint ... ok
+test contract::tests::burn ... FAILED
+test contract::tests::instantiate::basic ... FAILED
+test allowances::tests::send_from_respects_limits ... FAILED
+test allowances::tests::transfer_from_respects_limits ... FAILED
+test contract::tests::can_mint_by_minter ... FAILED
+test contract::tests::instantiate::mintable ... FAILED
+test contract::tests::instantiate_multiple_accounts ... FAILED
+test contract::tests::queries_work ... FAILED
+test contract::tests::send ... FAILED
+test contract::tests::transfer ... FAILED
+
+successes:
+
+successes:
+    allowances::tests::allowances_independent
+    allowances::tests::burn_from_respects_limits
+    allowances::tests::increase_decrease_allowances
+    allowances::tests::no_self_allowance
+    contract::tests::instantiate::marketing::basic
+    contract::tests::instantiate::marketing::invalid_marketing
+    contract::tests::instantiate::mintable_over_cap
+    contract::tests::marketing::clear_description
+    contract::tests::marketing::clear_marketing
+    contract::tests::marketing::clear_project
+    contract::tests::marketing::update_description
+    contract::tests::marketing::update_logo_png
+    contract::tests::marketing::update_logo_png_invalid
+    contract::tests::marketing::update_logo_png_oversized
+    contract::tests::marketing::update_logo_svg
+    contract::tests::marketing::update_logo_svg_invalid
+    contract::tests::marketing::update_logo_svg_oversized
+    contract::tests::marketing::update_logo_url
+    contract::tests::marketing::update_marketing
+    contract::tests::marketing::update_marketing_invalid
+    contract::tests::marketing::update_project
+    contract::tests::marketing::update_unauthorised
+    contract::tests::no_one_mints_if_minter_unset
+    contract::tests::others_cannot_mint
+
+failures:
+
+---- contract::tests::burn stdout ----
+Test_burn
+total_balance:Uint128(0)
+thread 'contract::tests::burn' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(12263457)`', contracts/loopswap_token/src/contract.rs:1300:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::burn
+             at ./src/contract.rs:1300:9
+   5: loopswap_token::contract::tests::burn::{{closure}}
+             at ./src/contract.rs:1259:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::instantiate::basic stdout ----
+total_balance:Uint128(0)
+thread 'contract::tests::instantiate::basic' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(11223344)`', contracts/loopswap_token/src/contract.rs:826:13
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::instantiate::basic
+             at ./src/contract.rs:826:13
+   5: loopswap_token::contract::tests::instantiate::basic::{{closure}}
+             at ./src/contract.rs:798:9
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- allowances::tests::send_from_respects_limits stdout ----
+total_balance:Uint128(0)
+thread 'allowances::tests::send_from_respects_limits' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(955555)`', contracts/loopswap_token/src/allowances.rs:696:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::allowances::tests::send_from_respects_limits
+             at ./src/allowances.rs:696:9
+   5: loopswap_token::allowances::tests::send_from_respects_limits::{{closure}}
+             at ./src/allowances.rs:643:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- allowances::tests::transfer_from_respects_limits stdout ----
+total_balance:Uint128(0)
+thread 'allowances::tests::transfer_from_respects_limits' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(955555)`', contracts/loopswap_token/src/allowances.rs:519:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::allowances::tests::transfer_from_respects_limits
+             at ./src/allowances.rs:519:9
+   5: loopswap_token::allowances::tests::transfer_from_respects_limits::{{closure}}
+             at ./src/allowances.rs:486:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::can_mint_by_minter stdout ----
+Mint_balances after: Uint128(0)
+query_total_balance
+total_balanceQuery:Uint128(222222222)
+Mint_balances after: Uint128(0)
+query_total_balance
+total_balanceQuery:Uint128(222320656)
+total_balance:Uint128(222322347)
+thread 'contract::tests::can_mint_by_minter' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(111108)`,
+ right: `Uint128(11223344)`', contracts/loopswap_token/src/contract.rs:1026:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::can_mint_by_minter
+             at ./src/contract.rs:1026:9
+   5: loopswap_token::contract::tests::can_mint_by_minter::{{closure}}
+             at ./src/contract.rs:984:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::instantiate::mintable stdout ----
+total_balance:Uint128(0)
+thread 'contract::tests::instantiate::mintable' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(11223344)`', contracts/loopswap_token/src/contract.rs:866:13
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::instantiate::mintable
+             at ./src/contract.rs:866:13
+   5: loopswap_token::contract::tests::instantiate::mintable::{{closure}}
+             at ./src/contract.rs:833:9
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::instantiate_multiple_accounts stdout ----
+total_balance:Uint128(0)
+thread 'contract::tests::instantiate_multiple_accounts' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(11223344)`', contracts/loopswap_token/src/contract.rs:1156:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::instantiate_multiple_accounts
+             at ./src/contract.rs:1156:9
+   5: loopswap_token::contract::tests::instantiate_multiple_accounts::{{closure}}
+             at ./src/contract.rs:1096:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::queries_work stdout ----
+total_balance:Uint128(0)
+thread 'contract::tests::queries_work' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(12340000)`', contracts/loopswap_token/src/contract.rs:1182:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::queries_work
+             at ./src/contract.rs:1182:9
+   5: loopswap_token::contract::tests::queries_work::{{closure}}
+             at ./src/contract.rs:1161:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::send stdout ----
+total_balance:Uint128(0)
+thread 'contract::tests::send' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(12263457)`', contracts/loopswap_token/src/contract.rs:1373:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::send
+             at ./src/contract.rs:1373:9
+   5: loopswap_token::contract::tests::send::{{closure}}
+             at ./src/contract.rs:1308:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+---- contract::tests::transfer stdout ----
+total_balance:Uint128(0)
+thread 'contract::tests::transfer' panicked at 'assertion failed: `(left == right)`
+  left: `Uint128(0)`,
+ right: `Uint128(12263457)`', contracts/loopswap_token/src/contract.rs:1250:9
+stack backtrace:
+   0: rust_begin_unwind
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/std/src/panicking.rs:584:5
+   1: core::panicking::panic_fmt
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:142:14
+   2: core::panicking::assert_failed_inner
+   3: core::panicking::assert_failed
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/panicking.rs:181:5
+   4: loopswap_token::contract::tests::transfer
+             at ./src/contract.rs:1250:9
+   5: loopswap_token::contract::tests::transfer::{{closure}}
+             at ./src/contract.rs:1199:5
+   6: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+   7: core::ops::function::FnOnce::call_once
+             at /rustc/4b91a6ea7258a947e59c6522cd5898e7c0a6a88f/library/core/src/ops/function.rs:248:5
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+
+
+failures:
+    allowances::tests::send_from_respects_limits
+    allowances::tests::transfer_from_respects_limits
+    contract::tests::burn
+    contract::tests::can_mint_by_minter
+    contract::tests::instantiate::basic
+    contract::tests::instantiate::mintable
+    contract::tests::instantiate_multiple_accounts
+    contract::tests::queries_work
+    contract::tests::send
+    contract::tests::transfer
+
+test result: FAILED. 24 passed; 10 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
